@@ -1,15 +1,18 @@
 package MidtermExam;
 
 public class Speech {
-    String[] words;
+    private String[] words;
 
     public Speech(String[] speech){
         this.words=speech;
     }
 
-    public char getFirstCharOfWord(int idx){
-        char firstChar = this.words[idx].charAt(0);
-        return ConvertChar.toLowerCase(firstChar);
+    public Character getFirstCharOfWord(int idx){
+        if(idx< words.length) {
+            char firstChar = this.words[idx].charAt(0);
+            return ConvertChar.toLowerCase(firstChar);
+        }
+        return null;
     }
 
     public int getNumOfWords(){
@@ -17,3 +20,4 @@ public class Speech {
     }
 
 }
+

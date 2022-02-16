@@ -39,8 +39,14 @@ public class SpeechHistogram {
         for(int i=0;i<counts.length;i++){
             System.out.printf("%c : (%d)\n",97+i,counts[i]);
         }
+
         for(int i=0;i<groupCounts.length;i++){
-            System.out.printf("%c - %c : (%d)\n" , 97+5*i,101+5*i,groupCounts[i]);
+            System.out.printf("%c - %c : (%d)" , 97+5*i,101+5*i,groupCounts[i]);
+            for(int j=0;j<groupCounts[i];j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
         }
     }
 }
+

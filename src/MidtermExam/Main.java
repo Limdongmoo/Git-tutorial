@@ -3,7 +3,7 @@ package MidtermExam;
 public class Main {
     public static void main(String[] args) {
         // Partial excerpts from American Actor Robert Deniro's speech to NYU's TISCH School of the Arts, 2015
-        String[] RobertDenierSpeech = { "The", "good", "news", "is", "that",
+        String[] RobertDeniroSpeech = { "The", "good", "news", "is", "that",
                 "that’s", "not", "a", "bad", "place", "to", "start.",
                 "Now", "that", "you’ve", "made", "your", "choice,",
                 "or", "rather", "succumbed", "to", "it,", "your",
@@ -29,43 +29,45 @@ public class Main {
                 "for", "a", "directing", "or", "choreographing",
                 "job." };
 
-        Speech speech = new Speech(RobertDenierSpeech);
+        Speech speech = new Speech(RobertDeniroSpeech);
         SpeechHistogram histogram = new SpeechHistogram(speech);
         histogram.calculateHistogram();
         histogram.print();
         /*
-        a : (15)
-        b : (5)
-        c : (7)
-        d : (7)
-        e : (2)
-        f : (7)
-        g : (6)
-        h : (3)
-        i : (14)
-        j : (1)
-        k : (1)
-        l : (3)
-        m : (1)
-        n : (5)
-        o : (9)
-        p : (6)
-        q : (0)
-        r : (3)
-        s : (5)
-        t : (22)
-        u : (0)
-        v : (0)
-        w : (10)
-        x : (0)
-        y : (15)
-        z : (0)
-        a - e : (36)
-        f - j : (31)
-        k - o : (19)
-        p - t : (36)
-        u - y : (25)
+a : (15)
+b : (5)
+c : (7)
+d : (7)
+e : (2)
+f : (7)
+g : (6)
+h : (3)
+i : (14)
+j : (1)
+k : (1)
+l : (3)
+m : (1)
+n : (5)
+o : (9)
+p : (6)
+q : (0)
+r : (3)
+s : (5)
+t : (22)
+u : (0)
+v : (0)
+w : (10)
+x : (0)
+y : (15)
+z : (0)
+a - e : (36)************************************
+f - j : (31)*******************************
+k - o : (19)*******************
+p - t : (36)************************************
+u - y : (25)*************************
 
-         */
+
+    */
     }
 }
+

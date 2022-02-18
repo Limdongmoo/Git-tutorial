@@ -62,12 +62,21 @@ public class Manager {
             throw new MenuChoiceException();
         }
 
-        boolean added =hSet.add(pInfo);
-        if(added){
+        boolean added = hSet.contains(pInfo);
+        if(added==false){
+            hSet.add(pInfo);
             System.out.println("데이터 저장이 완료되었습니다.");
         }
         else{
-            System.out.println("이미 저장된 데이터 입니다.");
+            System.out.println("이미 저장된 데이터 입니다. 데이터를 변경합니다.");
+            itr = hSet.iterator();
+            while(itr.hasNext()){
+                PhoneInfo p = itr.next();
+                if(p.name.equals(pInfo.name)){
+                    itr.remove();
+                    hSet.add(pInfo);
+                }
+            }
         }
     }
 

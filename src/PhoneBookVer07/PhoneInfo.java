@@ -14,6 +14,10 @@ public class PhoneInfo {
         System.out.println("전화번호 : " +pNum);
     }
 
+    public int hashCode(){
+        return name.hashCode();
+    }
+
     public boolean equals(Object obj){
         PhoneInfo p =(PhoneInfo) obj;
         if(p.name.equals(name)){

@@ -1,5 +1,4 @@
 package FinalExam;
-
 import java.io.IOException;
 
 public class Main {

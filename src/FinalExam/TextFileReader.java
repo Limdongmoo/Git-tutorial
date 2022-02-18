@@ -30,10 +30,9 @@ public class TextFileReader {
     public void printWords(){
         System.out.println("words의 단어 개수:    " + words.size());
         for(int i=0;i<words.size();i++){
-            System.out.println(words.get(i));
+            System.out.print("\"" + words.get(i)+"\"  ");
         }
+        System.out.println("");
     }
-
-
 }
 

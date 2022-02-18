@@ -17,15 +17,14 @@ public class TextFileReaderSepDelimiter extends TextFileReader{
             if(st.countTokens()==1){
                 continue;
             }
+            words.remove(i);
             while(st.hasMoreTokens()){
                 words.add(st.nextToken());
-                words.remove(i);
             }
         }
     }
     public void printWords(){
         super.printWords();
     }
-
 }
 

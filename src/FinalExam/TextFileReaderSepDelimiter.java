@@ -23,8 +23,5 @@ public class TextFileReaderSepDelimiter extends TextFileReader{
             }
         }
     }
-    public void printWords(){
-        super.printWords();
-    }
 }
 

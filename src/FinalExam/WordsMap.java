@@ -14,7 +14,6 @@ public class WordsMap {
             for(int i=0;i<list.size();i++){
                 if(hMap.containsKey(list.get(i).charAt(0))){
                     int a=hMap.get(list.get(i).charAt(0));
-                    hMap.remove(list.get(i).charAt(0));
                     hMap.put(list.get(i).charAt(0),a+1);
                 }
                 else{
@@ -27,7 +26,6 @@ public class WordsMap {
             for(int i=0;i<list.size();i++){
                 if(hMap.containsKey(list.get(i).charAt(list.get(i).length()-1))){
                     int a=hMap.get(list.get(i).charAt(list.get(i).length()-1));
-                    hMap.remove(list.get(i).charAt(list.get(i).length()-1));
                     hMap.put(list.get(i).charAt(list.get(i).length()-1),a+1);
                 }
                 else{
@@ -39,12 +37,11 @@ public class WordsMap {
     }
 
     public void printMap(){
-        Iterator<Character> itr = hMap.keySet().iterator();
+        Set<Map.Entry<Character,Integer>> entrySet = hMap.entrySet();
         int total =0;
-        while(itr.hasNext()) {
-                char a = itr.next();
-                System.out.printf("%c:%d  ", a, hMap.get(a));
-                total+=hMap.get(a);
+        for(Map.Entry<Character,Integer> e : entrySet){
+            System.out.printf("%c:%d    ",e.getKey(),e.getValue());
+            total+=e.getValue();
         }
         System.out.println("");
         System.out.println("Total number characters : " + total);

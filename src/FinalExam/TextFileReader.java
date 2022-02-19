@@ -25,14 +25,14 @@ public class TextFileReader {
         while(in.hasNext()){
             words.add(in.next());
         }
+        in.close();
     }
 
     public void printWords(){
-        System.out.println("words의 단어 개수:    " + words.size());
-        for(int i=0;i<words.size();i++){
-            System.out.print("\"" + words.get(i)+"\"  ");
+        System.out.println("단어의 개수 :  "+ words.size());
+        for(String e : words){
+            System.out.print("\""+e+"\"  ");
         }
-        System.out.println("");
     }
 }
 
